@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <h4 className="text-2xl font-bold text-white hover:text-blue-400 transition-colors duration-300">
-        KB.
+        Believe K.
       </h4>
 
       {/* Hamburger Menu Icon (Mobile) */}

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLaptop, FaCode, FaMobileAlt, FaDesktop } from 'react-icons/fa';
+import { FaLaptop, FaCode, FaMobileAlt, FaDesktop } from "react-icons/fa";
 
 const ServicesPage = () => {
   // Animation variants for the service cards
@@ -11,42 +11,58 @@ const ServicesPage = () => {
   };
 
   return (
-    <section id="services" className="py-12 sm:py-16 bg-gray-900 text-center">
+    <section id="services" className="py-12 sm:py-16 bg-gray-900 text-center scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.div
-          className="mb-8 sm:mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8 sm:mb-12"
         >
-          <p className="text-sm sm:text-lg text-blue-500 uppercase">What I Do</p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-blue-400">Awesome Quality Services</h2>
+          <p className="text-sm sm:text-lg font-bold text-blue-400 uppercase">
+            What I Do
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white">
+            Awesome Quality Services
+          </h2>
+          <div className="w-16 h-1 bg-blue-400 mx-auto mb-3"></div>
         </motion.div>
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {[
             {
-              icon: <FaLaptop className="text-blue-500 text-4xl sm:text-5xl mx-auto mb-4" />,
+              icon: (
+                <FaLaptop className="text-blue-500 text-4xl sm:text-5xl mx-auto mb-4" />
+              ),
               title: "Web Design",
-              description: "I create visually appealing and user-friendly websites tailored to meet your needs.",
+              description:
+                "I create visually appealing and user-friendly websites tailored to meet your needs.",
             },
             {
-              icon: <FaCode className="text-green-500 text-4xl sm:text-5xl mx-auto mb-4" />,
+              icon: (
+                <FaCode className="text-green-500 text-4xl sm:text-5xl mx-auto mb-4" />
+              ),
               title: "Web Development",
-              description: "Using HTML, CSS, JavaScript, and modern frameworks, I develop fast and scalable websites.",
+              description:
+                "Using HTML, CSS, JavaScript, and modern frameworks, I develop fast and scalable websites.",
             },
             {
-              icon: <FaMobileAlt className="text-purple-500 text-4xl sm:text-5xl mx-auto mb-4" />,
+              icon: (
+                <FaMobileAlt className="text-purple-500 text-4xl sm:text-5xl mx-auto mb-4" />
+              ),
               title: "Responsive Web Design",
-              description: "I ensure websites are fully responsive and provide a seamless experience across all devices.",
+              description:
+                "I ensure websites are fully responsive and provide a seamless experience across all devices.",
             },
             {
-              icon: <FaDesktop className="text-red-500 text-4xl sm:text-5xl mx-auto mb-4" />,
+              icon: (
+                <FaDesktop className="text-red-500 text-4xl sm:text-5xl mx-auto mb-4" />
+              ),
               title: "User Interface (UI) Design",
-              description: "Writing clean and efficient code to implement design mockups with cross-browser compatibility.",
+              description:
+                "Writing clean and efficient code to implement design mockups with cross-browser compatibility.",
             },
           ].map((service, index) => (
             <motion.div
@@ -65,8 +81,12 @@ const ServicesPage = () => {
               >
                 {service.icon}
               </motion.div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm sm:text-base text-gray-600">{service.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                {service.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>

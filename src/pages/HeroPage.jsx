@@ -3,7 +3,10 @@ import { motion } from "framer-motion";
 
 const HeroPage = () => {
   return (
-    <section id="home"  className="flex flex-col md:flex-row items-center justify-between p-6 md:p-10 bg-gray-900 text-white min-h-screen">
+    <section
+      id="home"
+      className="flex flex-col md:flex-row items-center justify-between p-6 md:p-10 bg-gray-900 text-white min-h-screen pt-20 md:pt-24 scroll-mt-20" // Added pt-20 for padding-top
+    >
       {/* Text Content */}
       <motion.div
         className="text-center md:text-left md:w-1/2"
@@ -23,13 +26,7 @@ const HeroPage = () => {
           React with a focus on creating responsive components that enhance user
           experience.
         </p>
-        <motion.button
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          View My Work
-        </motion.button>
+        
       </motion.div>
 
       {/* Image */}
@@ -42,7 +39,7 @@ const HeroPage = () => {
         <img
           src="/bee.jpg"
           alt="Hero Image"
-          className="rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-cover shadow-2xl border-4 border-blue-400 hover:border-blue-300 transition-all duration-300"
+          className="rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover shadow-2xl border-6 border-blue-400 hover:border-blue-300 transition-all duration-300"
         />
       </motion.div>
     </section>

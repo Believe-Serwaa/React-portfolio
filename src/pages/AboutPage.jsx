@@ -22,7 +22,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <section id="about" className="py-12 sm:py-16 bg-gray-900 text-white">
+    <section id="about" className="py-12 sm:py-16 bg-gray-900 text-white scroll-mt-20">
       <div className="container mx-auto flex flex-col md:flex-row items-stretch gap-6 md:gap-8 px-4 sm:px-6 lg:px-8">
         {/* Image Column */}
         <motion.div
@@ -50,7 +50,19 @@ const AboutPage = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-blue-300">About Me</h1>
+          {/* About Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-6"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+              About Me
+            </h2>
+            <div className="w-16 h-1 bg-blue-400 mx-auto mb-3"></div>
+          </motion.div>
+
           <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-300">
             I'm a passionate and dedicated individual with a strong drive for
             personal and professional growth. With a background in computer
@@ -58,10 +70,25 @@ const AboutPage = () => {
             mindset to everything I do.
           </p>
           <p className="mb-4 sm:mb-6 text-sm sm:text-base text-gray-300">
-          I thrive in collaborative environments where I can work with diverse teams, tackle new challenges, and continuously expand my knowledge. Outside of work, I engage in reading and exploring digital content to stay informed, inspired, and continuously broaden my perspective.
+            I thrive in collaborative environments where I can work with diverse
+            teams, tackle new challenges, and continuously expand my knowledge.
+            Outside of work, I engage in reading and exploring digital content to
+            stay informed, inspired, and continuously broaden my perspective.
           </p>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mt-6 mb-4 text-blue-300">Skills</h2>
+          {/* Skills Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-6"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+              Skills
+            </h2>
+            <div className="w-16 h-1 bg-blue-400 mx-auto mb-3"></div>
+          </motion.div>
+
           <div className="space-y-3 sm:space-y-4">
             {skills.map((skill, index) => (
               <motion.div
@@ -87,7 +114,6 @@ const AboutPage = () => {
               </motion.div>
             ))}
           </div>
-          
         </motion.div>
       </div>
     </section>
