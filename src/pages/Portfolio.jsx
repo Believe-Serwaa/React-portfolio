@@ -4,14 +4,19 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Landing Page Website",
+    image: "/geotech.png",
+    link: "https://geo-tech.netlify.app/",
+  },
+  {
     title: "Portfolio Website",
-    image: "/buk.webp",
-    link: "https://believe-serwaa.github.io/My-Portfolio/",
+    image: "/folio.png",
+    link: "https://bee-port.netlify.app/",
   },
   {
     title: "CodeConnect Website",
-    image: "./images/code.png",
-    link: "https://devs4change.netlify.app",
+    image: "/code.png",
+    link: "https://devs4change.netlify.app/",
   },
   {
     title: "Movie Search Website",
@@ -40,9 +45,9 @@ const Portfolio = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-6"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-white">
             Portfolio
           </h2>
           <div className="w-16 h-1 bg-blue-400 mx-auto mb-3"></div>
@@ -64,7 +69,7 @@ const Portfolio = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-60 object-cover"
+                  className="w-full h-48 sm:h-60 object-cover"
                 />
                 {/* RGBA Transparent Overlay with inline styles */}
                 <div
@@ -73,7 +78,7 @@ const Portfolio = () => {
                     backgroundColor: "rgba(0, 0, 0, 0.6)",
                   }}
                 >
-                  <span className="text-white text-lg font-semibold">
+                  <span className="text-white text-lg sm:text-xl font-semibold">
                     {project.title}
                   </span>
                   <FaExternalLinkAlt className="text-white ml-2" />

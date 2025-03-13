@@ -33,11 +33,11 @@ const Experience = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-900">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-gray-900">
       {/* Experience Section */}
-      <section id="experience" className="mb-16 scroll-mt-20 py-12">
+      <section id="experience" className="mb-8 scroll-mt-20 py-6">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white"
+          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-white"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Experience = () => {
             <motion.div
               className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-blue-400"
               initial={{ width: 0 }}
-              whileInView={{ width: "50%" }} 
+              whileInView={{ width: "50%" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             />
@@ -146,7 +146,7 @@ const Experience = () => {
       {/* Education Section */}
       <section>
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white"
+          className="text-3xl sm:text-4xl font-bold text-center mb-6 text-white"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -160,7 +160,7 @@ const Experience = () => {
             <motion.div
               className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 h-1 bg-blue-500"
               initial={{ width: 0 }}
-              whileInView={{ width: "50%" }} /* Shorter and centered line */
+              whileInView={{ width: "50%" }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
             />
@@ -183,7 +183,7 @@ const Experience = () => {
               school: "Accra, Ghana",
               description:
                 "Specialized in Front-End Development, gaining expertise in HTML, CSS, JavaScript, and React. Worked on collaborative projects that enhanced my problem-solving skills.",
-              focus: ["Front-End", "React", "UI/UX"],
+              focus: ["JavaScript", "React", "HTML/CSS"],
             },
             {
               date: "09/2017 - 06/2020",
@@ -191,15 +191,15 @@ const Experience = () => {
               school: "Ho Technical University, Ho",
               description:
                 "Studied foundational concepts in computer science, gaining exposure to IT fundamentals and general computing practices.",
-              focus: ["Computer Science", "Programming", "IT"],
+              focus: ["Database Management", "Programming", "Networking"],
             },
             {
               date: "09/2012 - 06/2015",
               degree: "Senior High School",
               school: "Sokode Secondary School, Sokode",
               description:
-                "Majored in Science, focusing on Mathematics, Physics, and Biology with additional studies in Chemistry.",
-              focus: ["Science", "Mathematics", "Physics"],
+                "Majored in General Science, focusing on Elective-Mathematics, Physics, and Biology with additional studies in Chemistry.",
+              focus: ["Science", "E-Maths", "Physics"],
             },
           ].map((edu, index) => (
             <motion.div
@@ -218,7 +218,7 @@ const Experience = () => {
                   <h3 className="text-lg font-bold text-gray-800">
                     {edu.degree}
                   </h3>
-                  <span className="px-2 py-1 bg-green-100 text-blue-800 rounded-full text-xs font-medium">
+                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
                     {edu.date}
                   </span>
                 </div>

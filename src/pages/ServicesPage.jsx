@@ -11,7 +11,7 @@ const ServicesPage = () => {
   };
 
   return (
-    <section id="services" className="py-12 sm:py-16 bg-gray-900 text-center scroll-mt-20">
+    <section id="services" className="py-8 sm:py-12 bg-gray-900 text-center scroll-mt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.div

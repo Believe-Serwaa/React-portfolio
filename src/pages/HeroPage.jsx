@@ -5,17 +5,17 @@ const HeroPage = () => {
   return (
     <section
       id="home"
-      className="flex flex-col md:flex-row items-center justify-between p-6 md:p-10 bg-gray-900 text-white min-h-screen pt-20 md:pt-24 scroll-mt-20" // Added pt-20 for padding-top
+      className="flex flex-col md:flex-row items-center justify-between p-6 md:p-10 bg-gray-900 text-white min-h-screen pt-20 md:pt-24 scroll-mt-20"
     >
       {/* Text Content */}
       <motion.div
-        className="text-center md:text-left md:w-1/2"
+        className="text-center md:text-left md:w-1/2 pl-6 md:pl-12"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-          Hello, I’m{" "}
+          Hello, I'm{" "}
           <span className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
             Believe Kwamitse
           </span>
@@ -26,21 +26,22 @@ const HeroPage = () => {
           React with a focus on creating responsive components that enhance user
           experience.
         </p>
-        
       </motion.div>
 
       {/* Image */}
       <motion.div
-        className="mt-6 md:mt-0 md:w-1/2 flex justify-center"
+        className="mt-6 md:mt-0 md:w-1/2 flex justify-center md:justify-end lg:justify-end pr-6 md:pr-12"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <img
-          src="/bee.jpg"
-          alt="Hero Image"
-          className="rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover shadow-2xl border-6 border-blue-400 hover:border-blue-300 transition-all duration-300"
-        />
+        <div>
+          <img
+            src="/bee.jpg"
+            alt="Hero Image"
+            className="rounded-full w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover shadow-2xl border-6 border-blue-400 hover:border-blue-300 transition-all duration-300"
+          />
+        </div>
       </motion.div>
     </section>
   );

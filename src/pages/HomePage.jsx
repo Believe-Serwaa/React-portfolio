@@ -11,7 +11,7 @@ import { div } from 'framer-motion/client'
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 overflow-x-hidden">
       <Navbar />
       <HeroPage />
       <AboutPage />

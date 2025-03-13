@@ -45,17 +45,18 @@ const Navbar = () => {
 
       {/* Hamburger Menu Icon (Mobile) */}
       <div className="md:hidden">
-        <button onClick={toggleMenu} className="text-white focus:outline-none hover:text-blue-400 transition-colors duration-300">
+        <button
+          onClick={toggleMenu}
+          className="text-white focus:outline-none hover:text-blue-400 transition-colors duration-300"
+        >
           {isMenuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
         </button>
       </div>
 
       {/* Navigation Links */}
       <ul
-        className={`md:flex md:space-x-6 ${
-          isMenuOpen
-            ? "block absolute top-16 right-4 bg-gray-800/90 rounded-lg p-4 shadow-lg space-y-4"
-            : "hidden"
+        className={`absolute md:relative top-16 md:top-0 right-4 md:right-0 bg-gray-800/90 md:bg-transparent rounded-lg p-4 md:p-0 shadow-lg md:shadow-none space-y-4 md:space-y-0 md:flex md:space-x-6 transition-all duration-300 ${
+          isMenuOpen ? "flex flex-col items-end" : "hidden md:flex"
         }`}
       >
         {[
@@ -71,8 +72,8 @@ const Navbar = () => {
               href={`#${id}`}
               className={`block py-2 px-4 transition-all duration-300 rounded-lg ${
                 activeSection === id
-                  ? "text-white font-bold border-2 border-blue-400" // Active link style
-                  : "text-white hover:bg-blue-400 hover:text-gray-900" // Hover style
+                  ? "text-white font-bold border-2 border-blue-400"
+                  : "text-white hover:bg-blue-400 hover:text-gray-900"
               }`}
               onClick={() => setIsMenuOpen(false)} // Close menu on link click
             >
