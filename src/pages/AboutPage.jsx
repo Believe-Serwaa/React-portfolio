@@ -21,7 +21,7 @@ const AboutPage = () => {
   // Skill data
   const skills = [
     { name: "HTML", level: "75%" },
-    { name: "CSS", level: "70%" },
+    { name: "CSS", level: "65%" },
     { name: "JavaScript", level: "70%" },
     { name: "React", level: "80%" },
   ];
